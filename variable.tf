@@ -34,5 +34,9 @@ variable "virtual_network_name" {
  # 
 #}
 
+variable "private_ip_address" {
+  
+}
+
 
 

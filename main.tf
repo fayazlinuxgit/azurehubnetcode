@@ -80,7 +80,7 @@ resource "azurerm_network_interface" "fayazint" {
     subnet_id                     = azurerm_subnet.fayaz-subnet.id
     #private_ip_address_allocation = "Dynamic"
     private_ip_address_allocation = "Static"
-    private_ip_address            = "10.0.1.20"
+    private_ip_address            = var.private_ip_address
     public_ip_address_id          = azurerm_public_ip.pub-ip.id
   }
 }
