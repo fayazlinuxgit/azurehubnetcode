@@ -24,7 +24,7 @@ resource "azurerm_virtual_network" "fayaz-net" {
   name                = var.virtual_network_name
   resource_group_name = azurerm_resource_group.fayaz-res-group.name
   location            = azurerm_resource_group.fayaz-res-group.location
-  address_space       = ["10.0.0.0/16"]
+  address_space       = var.address_space_cidr
 }
 
 # Create subnet
@@ -32,7 +32,7 @@ resource "azurerm_subnet" "fayaz-subnet" {
   name                 = var.subnet-name
   resource_group_name  = azurerm_resource_group.fayaz-res-group.name
   virtual_network_name = azurerm_virtual_network.fayaz-net.name
-  address_prefixes     = ["10.0.1.0/24"]
+  address_prefixes     = var.address_prefixes_subnetA
 }
 
 output "f" {

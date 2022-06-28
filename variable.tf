@@ -38,5 +38,13 @@ variable "private_ip_address" {
   
 }
 
+variable "address_prefixes_subnetA" {
+  
+
+}
+
+variable "address_space_cidr" {
+  
+}
 
 
